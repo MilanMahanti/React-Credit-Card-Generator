@@ -56,7 +56,7 @@ export default function Form({ onChange }) {
       errors.cvc = "CVC cant be blank";
     }
     if (
-      !/\d/.test(newCardDeatils.cardNumber) ||
+      !/^\d+$/.test(newCardDeatils.cardNumber) ||
       specialChars.test(newCardDeatils.cardNumber)
     ) {
       errors.cardNumber = "Enter valid number";
@@ -65,7 +65,7 @@ export default function Form({ onChange }) {
       errors.cardNumber = "Number must be 16 characters long";
     }
     if (
-      !/\d/.test(newCardDeatils.month) ||
+      !/^\d+$/.test(newCardDeatils.month) ||
       specialChars.test(newCardDeatils.month)
     ) {
       errors.month = "Enter valid number";
@@ -74,14 +74,14 @@ export default function Form({ onChange }) {
       errors.month = "Month must be between 1-12";
     }
     if (
-      !/\d/.test(newCardDeatils.year) ||
+      !/^\d+$/.test(newCardDeatils.year) ||
       newCardDeatils.year.length < 2 ||
       specialChars.test(newCardDeatils.year)
     ) {
       errors.year = "Enter valid year";
     }
     if (
-      !/\d/.test(newCardDeatils.cvc) ||
+      !/^\d+$/.test(newCardDeatils.cvc) ||
       newCardDeatils.cvc.length < 3 ||
       specialChars.test(newCardDeatils.cvc)
     ) {

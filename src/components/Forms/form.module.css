@@ -5,9 +5,10 @@
 }
 
 form {
+  margin-left: 12rem;
   align-self: center;
   justify-self: center;
-  /* max-width: 382px; */
+
   letter-spacing: 1.875px;
 
   width: 50%;

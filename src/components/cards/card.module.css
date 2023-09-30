@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@700&display=swap");
+:root {
+  --inter: "Inter", sans-serif;
+  --roboto: "Roboto", sans-serif;
+}
+
+.cardcontainer {
+  align-self: center;
+  justify-self: center;
+  width: 80%;
+  height: 70%;
+  position: relative;
+}
+.cardfrontcontainer {
+  position: absolute;
+  top: -1rem;
+  right: -16rem;
+}
+.cardbackcontainer {
+  position: absolute;
+  bottom: -1rem;
+  right: -22rem;
+}
+.cardfront {
+  position: relative;
+  background-image: url(./../../asset/bg-card-front.png);
+  background-size: cover;
+  width: 36.2rem;
+  height: 20.4rem;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cardback {
+  background-image: url(./../../asset/bg-card-back.png);
+  background-size: cover;
+  width: 36.2rem;
+  height: 20.4rem;
+  border-radius: 1rem;
+  position: relative;
+}
+.circlebox {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.circle-filled {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.circle-border {
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid #fff;
+}
+.cardnumber {
+  font-family: var(--inter);
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  letter-spacing: 4.68px;
+  color: #fff;
+  margin-top: 2rem;
+}
+.card-details {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  font-family: var(--roboto);
+  font-weight: 700;
+}
+.name {
+  font-size: 1.3rem;
+  letter-spacing: 2.47px;
+  text-transform: uppercase;
+}
+.expiry {
+  font-size: 1.4rem;
+  letter-spacing: 3.29px;
+}
+.cvc {
+  color: #fff;
+  font-family: var(--roboto);
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 3.29px;
+  position: absolute;
+  right: 3.2rem;
+  top: 9.2rem;
+}
