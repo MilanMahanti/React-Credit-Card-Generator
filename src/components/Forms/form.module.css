@@ -3,43 +3,11 @@
   --inter: "Inter", sans-serif;
   --roboto: "Roboto", sans-serif;
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
 
-html {
-  font-size: 62.5%;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: var(--roboto);
-}
-.app {
-  width: 100%;
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 30% 1fr;
-}
-.sidebar {
-  grid-column: 1/2;
-  background-image: linear-gradient(153deg, #101a19, #3d1634, #2a1a3f, #270626);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-.card-details-form {
-  grid-column: 2/-1;
-  width: 100%;
-  height: 100%;
-  display: grid;
-
-  background-color: #d9d9d9;
-}
-/*
 form {
   align-self: center;
   justify-self: center;
+  /* max-width: 382px; */
   letter-spacing: 1.875px;
 
   width: 50%;
@@ -129,14 +97,14 @@ button:hover {
 .margin {
   margin: 3.1rem 0;
 }
-*/
+
 /*DISABILING THE NUMBER SPINNER FROM INPUT*/
 /* input::-webkit-inner-spin-button,
-input::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-input[type="number"] {
-  -moz-appearance: textfield;
-} */
+  input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  input[type="number"] {
+    -moz-appearance: textfield;
+  } */
