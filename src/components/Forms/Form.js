@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Styles from "./form.module.css";
-
+import icon from "./../../asset/icon-complete.svg";
 export default function Form({ onChange }) {
   const [name, setName] = useState("");
   const [cardNumber, setCardNumber] = useState("");
@@ -8,6 +8,7 @@ export default function Form({ onChange }) {
   const [year, setYear] = useState("");
   const [cvc, SetCVC] = useState("");
   const [error, setError] = useState({});
+  const [isSubmit, setIsSubmit] = useState(false);
 
   function handelSubmit(e) {
     e.preventDefault();
@@ -22,6 +23,7 @@ export default function Form({ onChange }) {
     setError(newErrors);
     if (Object.keys(newErrors).length === 0) {
       updateValues(newCardDeatils);
+      setIsSubmit(true);
     }
   }
 
@@ -90,7 +92,18 @@ export default function Form({ onChange }) {
     return errors;
   }
 
-  return (
+  function handelContinue(e) {
+    e.preventDefault();
+    setIsSubmit(false);
+  }
+
+  return isSubmit ? (
+    <form className={Styles.success} onSubmit={handelContinue}>
+      <img src={icon} alt="icon" />
+      <p>Credit Card Details submitted successfully.</p>
+      <button>Continue</button>
+    </form>
+  ) : (
     <form onSubmit={handelSubmit}>
       <div>
         <label>Cardholder name</label>
@@ -112,7 +125,6 @@ export default function Form({ onChange }) {
         />
         {error.cardNumber && <p className={Styles.error}>{error.cardNumber}</p>}
       </div>
-
       <div className={Styles.expiry}>
         <div className={Styles.date}>
           <label>Expiary Date(mm/yy)</label>
